@@ -18,7 +18,6 @@
     //Calculo da Média
     $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
 }
-    echo($media)
 
 ?>
 <!DOCTYPE html>
@@ -68,7 +67,7 @@
 
             </div>
             <footer id="resultado">
-                A média é:
+                A média é: <?php echo($media);?>
             </footer>
         </div>
         

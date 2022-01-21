@@ -7,7 +7,7 @@
     $nota3 = (double) 0;
     $nota4 = (double) 0;
     $media = (double) 0;
-    
+
     //Recebendo os valores das caixas de texto utilizando o POST do formulário
     if(isset($_POST['btncalc'])){
     $nota1 = $_POST['txtn1'];
@@ -38,22 +38,22 @@
                 <form name="frmMedia" method="post" action="media.php">
                     <div>
                         <label>Nota 1:</label>
-                        <input type="text" name="txtn1" value=""  > 
+                        <input type="text" name="txtn1" value="<?php echo($nota1)?>"  > 
                     </div>
                     
                     <div>
                         <label>Nota 2:</label>
-                        <input type="text" name="txtn2" value="" > 
+                        <input type="text" name="txtn2" value="<?php echo($nota2)?>" > 
                     </div>
                     
                     <div>
                         <label>Nota 3:</label>
-                        <input type="text" name="txtn3" value="" > 
+                        <input type="text" name="txtn3" value="<?php echo($nota3)?>" > 
                     </div>
                     
                     <div>
                         <label>Nota 4:</label>
-                        <input type="text" name="txtn4" value="" >
+                        <input type="text" name="txtn4" value="<?php echo($nota4)?>" >
                     </div>
                     <div>
                         <input type="submit" name="btncalc" value ="Calcular" >

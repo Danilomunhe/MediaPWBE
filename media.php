@@ -9,6 +9,7 @@
     $media = (double) 0;
 
     //Recebendo os valores das caixas de texto utilizando o POST do formulário
+    if(isset($_POST['btncalc'])){
     $nota1 = $_POST['txtn1'];
     $nota2 = $_POST['txtn2'];
     $nota3 = $_POST['txtn3'];
@@ -16,7 +17,7 @@
 
     //Calculo da Média
     $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
-
+}
     echo($media)
 
 ?>

@@ -10,13 +10,24 @@
 
     //Recebendo os valores das caixas de texto utilizando o POST do formulário
     if(isset($_POST['btncalc'])){
-    $nota1 = $_POST['txtn1'];
-    $nota2 = $_POST['txtn2'];
-    $nota3 = $_POST['txtn3'];
-    $nota4 = $_POST['txtn4'];
+        $nota1 = $_POST['txtn1'];
+        $nota2 = $_POST['txtn2'];
+        $nota3 = $_POST['txtn3'];
+        $nota4 = $_POST['txtn4'];
+        /*
+          Operadores lógicos em php
+          E - (and, &&) 
+          OU - (or, ||)
+          NAO - (!)
+        */
+
+    if( $_POST['txtn1'] == "" || $_POST['txtn2'] == "" || $_POST['txtn3'] == "" || $_POST['txtn4'] == ""){
+        echo('É obrigatório preencher todos os valores para realizar o cálculo!!');
+    }else{
 
     //Calculo da Média
     $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
+}
 }
     
 ?>

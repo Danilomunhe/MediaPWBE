@@ -19,14 +19,29 @@
           E - (and, &&) 
           OU - (or, ||)
           NAO - (!)
-        */
 
+          Funções para validação de tipos de dados
+          is_numeric(): verifica se é um número
+          is_integer(): validação para números inteiros
+          is_float(): validação para números reais
+          is_double(): validação para números reais
+          is_array(): validação para vetores e matrizes
+          is_object(): validação para objetos
+          is_bool(): validação para valores booleano
+          is_string(): validação para valores de texto.
+          */
+        
+    //Validação para tratamento de caixa vazia
     if( $_POST['txtn1'] == "" || $_POST['txtn2'] == "" || $_POST['txtn3'] == "" || $_POST['txtn4'] == ""){
         echo('É obrigatório preencher todos os valores para realizar o cálculo!!');
     }else{
+        if(is_numeric($nota1) && is_numeric($nota2) && is_numeric($nota3) && is_numeric($nota4)){
+                //Calculo da Média
+            $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
+        }else{
+            echo('Digite apenas números');
+        }
 
-    //Calculo da Média
-    $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
 }
 }
     

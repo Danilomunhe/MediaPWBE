@@ -33,11 +33,11 @@
         
     //Validação para tratamento de caixa vazia
     if( $_POST['txtn1'] == "" || $_POST['txtn2'] == "" || $_POST['txtn3'] == "" || $_POST['txtn4'] == ""){
-        echo('É obrigatório preencher todos os valores para realizar o cálculo!!');
+        echo('<p class="msgErro">É obrigatório preencher todos os valores para realizar o cálculo!!</p>');
     }else{
         if(!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)){
              
-            echo('Digite apenas números!!!');    
+            echo('<p class="msgErro">Digite apenas números!!!</p>');    
             
         }else{
            //Calculo da Média

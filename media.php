@@ -18,7 +18,7 @@
           Operadores lógicos em php
           E - (and, &&) 
           OU - (or, ||)
-          NAO - (!)
+          NAO - (!) vai antes da pergunta
 
           Funções para validação de tipos de dados
           is_numeric(): verifica se é um número
@@ -35,11 +35,13 @@
     if( $_POST['txtn1'] == "" || $_POST['txtn2'] == "" || $_POST['txtn3'] == "" || $_POST['txtn4'] == ""){
         echo('É obrigatório preencher todos os valores para realizar o cálculo!!');
     }else{
-        if(is_numeric($nota1) && is_numeric($nota2) && is_numeric($nota3) && is_numeric($nota4)){
-                //Calculo da Média
-            $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
+        if(!is_numeric($nota1) || !is_numeric($nota2) || !is_numeric($nota3) || !is_numeric($nota4)){
+             
+            echo('Digite apenas números!!!');    
+            
         }else{
-            echo('Digite apenas números!!!');
+           //Calculo da Média
+           $media = ($nota1 + $nota2 + $nota3 + $nota4) /4 ;
         }
 
 }
